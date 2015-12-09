@@ -7,6 +7,8 @@ public class Car {
 	double currentSpeed;
 	String color;
 	int currentGear;
+	int price;
+	boolean isSportCar;
 	
 	Person owner;
 	
@@ -20,6 +22,30 @@ public class Car {
 		
 		this.currentSpeed += currentSpeed;
 		System.out.println("The current speed is " + this.currentSpeed + " km/h.");
+		
+	}
+	
+	Car(String model, boolean isSportCar, String color){
+		
+		if(model != null && !model.equals("")){
+			this.model = model;
+		}else{
+			this.model = "No model choosed.";
+		}
+		
+		this.isSportCar = true;
+		
+		if(color != null && !model.equals("")){
+			this.color = color;
+		}else{
+			this.color = "No color choosed.";
+		}
+		
+		this.currentGear = 0;
+		this.currentSpeed = 0;
+		this.maxSpeed = 370;
+		
+		this.owner = null;
 		
 	}
 	

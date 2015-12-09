@@ -4,8 +4,8 @@ public class CarDemo {
 
 	public static void main(String[] args) {
 		
-		Car nissan = new Car();
-		Car audi = new Car();
+		Car nissan = new Car("Nissan GTR 2013", true, "Metalic Gray");
+		Car audi = new Car("Audi A8", false, "Black");
 		Person spas = new Person();
 		Person nik = new Person();
 		
