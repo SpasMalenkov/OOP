@@ -9,6 +9,7 @@ public class Car {
 	int currentGear;
 	int price;
 	boolean isSportCar;
+	double weight;
 	
 	Person owner;
 	
@@ -48,5 +49,39 @@ public class Car {
 		this.owner = null;
 		
 	}
+	
+	boolean  isMoreExpensive(Car car){
+		
+		if(car != null){
+			
+			return this.price > car.price;
+			
+		}
+		
+		return true;
+		
+	}
+	
+	double calculateCarPriceForScrap(double metalPrice){
+		
+		double coeff = 0.2;
+		if(this.color.equalsIgnoreCase("Black") || this.color.equalsIgnoreCase("White")){
+			coeff += 0.5;
+		}
+		
+		if(this.isSportCar){
+			coeff += 0.5;
+		}
+		
+		return weight*metalPrice*coeff;
+		
+	}
+	
+	void changeOwner(Person newOwner){
+		
+		this.owner = newOwner;
+		
+	}
+
 	
 }

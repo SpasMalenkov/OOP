@@ -1,48 +1,38 @@
 package problem_car;
 
+import java.util.Scanner;
+
 public class CarDemo {
 
 	public static void main(String[] args) {
 		
 		Car nissan = new Car("Nissan GTR 2013", true, "Metalic Gray");
 		Car audi = new Car("Audi A8", false, "Black");
-		Person spas = new Person();
-		Person nik = new Person();
 		
-		spas.age = 24;
-		spas.name = "Spas";
-		spas.ownedCar = nissan;
-		spas.friend =  nik;
+		Person spas = new Person("Spas", 910215, true);
+		Person nik = new Person("Nik", 960521, true);
 		
-		nik.age = 19;
-		nik.name = "Nik";
-		nik.ownedCar = audi;
-		nik.friend = spas;
 		
-		nissan.model = "Nissan GTR 2013";
-		nissan.maxSpeed = 375;
-		nissan.currentSpeed = 30;
-		nissan.color = "Metalic Gray";
-		nissan.currentGear = 1;
-		nissan.owner = spas;
+		System.out.println(spas.friends.length);
+		System.out.println();
 		
-		audi.model = "Audi R8";
-		audi.maxSpeed = 365;
-		audi.currentSpeed = 85;
-		audi.color = "Black";
-		audi.currentGear = 3;
-		audi.owner = nik;
+		nissan.price = 300000;
+		nissan.weight = 1400;
+		audi.price = 200000;
 		
-		nissan.increaseSpeed(50);
+		System.out.println(nissan.model);
+		System.out.println(nissan.isSportCar);
+		System.out.println(nissan.color);
+		System.out.println();
 		
-		System.out.println("The current gear is " + nissan.currentGear + ".");
+		System.out.println(audi.model);
+		System.out.println(audi.isSportCar);
+		System.out.println(audi.color);
+		System.out.println();
 		
-		nissan.printOwnerDetails();
-		spas.printFriend();
-		spas.eat();
-		spas.walk();
-		spas.drinkWater(8);
-		spas.growUp();
+		System.out.println(nissan.isMoreExpensive(audi));
+		System.out.println(nissan.calculateCarPriceForScrap(10));
+		
 	}
 
 }
