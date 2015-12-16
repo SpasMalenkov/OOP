@@ -6,12 +6,16 @@ public class CarDemo {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input capacity: ");
+		int capacity = sc.nextInt();
+		
 		Car nissan = new Car("Nissan GTR 2013", true, "Metalic Gray");
 		Car audi = new Car("Audi A8", false, "Black");
 		
+		
 		Person spas = new Person("Spas", 910215, true);
 		Person nik = new Person("Nik", 960521, true);
-		
 		
 		System.out.println(spas.friends.length);
 		System.out.println();
@@ -32,6 +36,7 @@ public class CarDemo {
 		
 		System.out.println(nissan.isMoreExpensive(audi));
 		System.out.println(nissan.calculateCarPriceForScrap(10));
+		
 		
 	}
 

@@ -2,17 +2,36 @@ package problem_car;
 
 public class CarShop {
 	
-	public static void main(String[] args){
+	Car[] cars;
+	int freePlaces;
+	
+	CarShop(int capacity){
 		
-		Car nissan = new Car("Nissan GTR 2013", true, "Metalic Gray");
-		Car audi = new Car("Audi A8", false, "Black");
+		cars = new Car[capacity];
+		freePlaces = capacity;
+	}
+	
+	boolean addCar(Car car){
 		
-		System.out.println(nissan.model);
-		System.out.println(nissan.isSportCar);
-		System.out.println(nissan.color);
-		System.out.println(nissan.maxSpeed);
-		System.out.println(nissan.currentSpeed);
-		System.out.println(nissan.currentGear);
+		int i = cars.length - freePlaces;
+		
+		if(freePlaces > 0 && cars[i] == null){
+			
+			cars[i] = car;
+			freePlaces -= 1;
+			return true;
+			
+		}else{
+			
+			return false;
+			
+		}
+	}
+	
+	Car getNextCar(){
+		
+		int i = cars.length - freePlaces;
+		return cars[i];
 		
 	}
 }
