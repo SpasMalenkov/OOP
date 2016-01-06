@@ -6,7 +6,8 @@
 	<classpathentry kind="src" path="lesson_03"/>
 	<classpathentry kind="src" path="lesson_04"/>
 	<classpathentry kind="src" path="lesson_05"/>
-	<classpathentry kind="src" path="lesson_06"/>
+	<classpathentry kind="src" path="lesson_06_java_01"/>
+	<classpathentry kind="src" path="lesson_06_java_02"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
